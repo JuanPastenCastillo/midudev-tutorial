@@ -2,11 +2,11 @@ import * as React from "react"
 import {
   Routes,
   Route,
-  Link,
+  // Link,
   NavLink,
-  Outlet,
-  useMatch,
-  useResolvedPath,
+  // Outlet,
+  // useMatch,
+  // useResolvedPath,
   useNavigate,
 } from "react-router-dom"
 import styled from "styled-components"
@@ -26,7 +26,10 @@ import FetchingData from "./fetchingData/FetchingData.js"
 import FetchAPI from "./fetchingData/FetchAPI.js"
 import AsyncAwait from "./fetchingData/AsyncAwait.js"
 import ListComponent from "./listComponent/ListComponent.js"
-
+import GiftHome from "./giftApplication/GiftHome.js"
+import UseReactRouter from "./UseReactRouter.js"
+import UseReactRouter2 from "./UseReactRouter2.js"
+import ListOfGifs from "./giftApplication/components/ListOfGifs.js"
 
 const MainWrapper = styled.div`
  /*  display: flex;
@@ -164,6 +167,7 @@ function App() {
         <CustomNavLink to="/user">Users Routes</CustomNavLink>
         <CustomNavLink to="/fetchingData">Fetching data</CustomNavLink>
         <CustomNavLink to="/listComponent">List Component</CustomNavLink>
+        <CustomNavLink to="/giftApplication">Gift application</CustomNavLink>
       </AllProjects>
 
 
@@ -171,13 +175,21 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
 
+        <Route path="giftApplication" element={<GiftHome />}>
+          <Route path="*" element={<NoMatch404 />} />
+
+        </Route>
+
+
+
+
         <Route path="fetchingData" element={<FetchingData />}>
           <Route path="FetchAPI" element={<FetchAPI />} />
           <Route path="AsyncAwait" element={<AsyncAwait />} />
         </Route>
-        
-        <Route path="listComponent" element={< ListComponent/>}>
-          
+
+        <Route path="listComponent" element={< ListComponent />}>
+
         </Route>
 
 

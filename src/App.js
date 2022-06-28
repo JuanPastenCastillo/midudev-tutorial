@@ -27,9 +27,6 @@ import FetchAPI from "./fetchingData/FetchAPI.js"
 import AsyncAwait from "./fetchingData/AsyncAwait.js"
 import ListComponent from "./listComponent/ListComponent.js"
 import GiftHome from "./giftApplication/GiftHome.js"
-import UseReactRouter from "./UseReactRouter.js"
-import UseReactRouter2 from "./UseReactRouter2.js"
-import ListOfGifs from "./giftApplication/components/ListOfGifs.js"
 
 const MainWrapper = styled.div`
  /*  display: flex;
